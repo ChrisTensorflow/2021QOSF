@@ -9,7 +9,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import plot, ion, show
 from matplotlib.colors import ListedColormap
-#from scipy import linalg
 import random
 from collections import Counter
 import itertools
@@ -52,7 +51,7 @@ P1X1 = np.array([[0, 0], [0, 1]])
 def gcg(*arg): #which is short for get_controlled_gate(*arg):
     #input the gates that you want to apply using quotation marks (e.g. "c","X","I","I" if you want the first to be the control and X to be (conditionally) applied to the second qubit while the third and fourth qubit is uninvolved
     "return matrix of size 2**num_qubits by 2**num_qubits"
-    n = 0 #The codes seems to work well without this (and makes it better, so I should double check and then remove it)
+    n = 0 
     for x in arg:
         n = n + x.count('c')
     if n == 0:
